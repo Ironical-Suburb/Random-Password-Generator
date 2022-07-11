@@ -1,0 +1,24 @@
+#----------------------------------------------------
+# Purpose of program: Randomly Generate 8 character Password 
+# Author: Priyanshu Pusola
+#----------------------------------------------------
+import random
+
+#A function do shuffle all the characters of a string
+def shuffle(word):
+  List = list(word)
+  random.shuffle(List)
+  return ''.join(List)
+
+#code (based on ASCII)
+uppercaseLetter1=chr(random.randint(65,90)) #Generate a random Uppercase letter 
+uppercaseLetter2=chr(random.randint(65,90)) #Generate a random Uppercase letter
+lowercaseLetter1=chr(random.randint(97,122)) #Generate a random Lowercase letter
+lowercaseLetter2 = chr(random.randint(97,122)) #Generate a random Lowercase letter
+specialchr1 = chr(random.randint(32,47))
+specialchr2 = chr(random.randint(32,47))
+lowercaseLetter3=chr(random.randint(97,122))
+lowercaseLetter4 = chr(random.randint(97,122))
+password = (lowercaseLetter1 + uppercaseLetter1 + uppercaseLetter2 + lowercaseLetter2+specialchr1 + specialchr2 + lowercaseLetter3 + lowercaseLetter4)
+Pass = shuffle(password)
+print(Pass)
