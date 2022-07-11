@@ -4,13 +4,13 @@
 #----------------------------------------------------
 import random
 
-#A function do shuffle all the characters of a string
+# Shuffle all the characters of a string
 def shuffle(word):
   List = list(word)
   random.shuffle(List)
   return ''.join(List)
 
-#code (based on ASCII)
+# Code (based on ASCII)
 uppercaseLetter1=chr(random.randint(65,90)) #Generate a random Uppercase letter 
 uppercaseLetter2=chr(random.randint(65,90)) #Generate a random Uppercase letter
 lowercaseLetter1=chr(random.randint(97,122)) #Generate a random Lowercase letter
@@ -21,4 +21,5 @@ lowercaseLetter3=chr(random.randint(97,122))
 lowercaseLetter4 = chr(random.randint(97,122))
 password = (lowercaseLetter1 + uppercaseLetter1 + uppercaseLetter2 + lowercaseLetter2+specialchr1 + specialchr2 + lowercaseLetter3 + lowercaseLetter4)
 Pass = shuffle(password)
+# Output password
 print(Pass)
